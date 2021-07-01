@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 public class ItemList {
 
-	//private is not applicable
+	//private is not applicable becoz the value inject from the another class
 	@Value("${dosa.price}")
 	public float dosa;
 	@Value("${idly.price}")
