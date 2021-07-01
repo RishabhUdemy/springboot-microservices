@@ -1,0 +1,39 @@
+We need not to configure application.properties/yml using @propertySource becoz it part spring boot application echo system (SpringApplication(-) internally locates and recgonizes as part of application startup activities)
+Any other user-defined properties placed any location must be cfg explicitly using @propertySource annotation..
+
+Can we change name or location of application.properties/application.yml?
+Ans  Yes we can change but it must be configured explicitly using @PropertySources
+
+application.properties/yml file contain
+=======================================
+	DataSource cfg
+	Spring boot banner cfg
+	spring boot log message
+	spring boot web application cfg spring.port
+	spring security
+	spring batch cfgs
+	spring actuator cfg
+	spring mail cfg
+	InMemory DB cfg
+	Messaging cfg
+	Zuul proxy cfg
+	Gateway cfg and etc
+
+url for spring boot properties key https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html 
+
+These pre-defined keys based message we can place both in application.properties/yml and also in user-defined additional properties/yml file
+
+if we change the name or location or extension of application.properties/yml file then it must be cfg explicitly using @PropertySource annotation
+
+we can inject values spring bean properties/yml files we can use two type annotation
+1. @Value
+2. @ConfigurationProperties
+
+@Value 
+	To inject each value to each spring bean property seperately
+ 	To inject 20 values of properties/yml file to 20 spring bean properties we need to use @Value annotation for 20 times
+
+@ConfigurationProperties (given by spring boot and cannot be used in spring application)
+	Support bulk injection (ie we need to write @ConfigurationProperties only 1 time on the top of spring bean class)
+	All keys in properties file must have same prefix and spring property names must be there in keys as last words (matching with each other)
+	Taking common prefix work for keys of properties/yml file in mandatory

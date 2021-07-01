@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component("configproperties")
-//@ConfigurationProperties(prefix = "org.website")
+@ConfigurationProperties(prefix = "org.website")
 public class ConfigurationPropertiesInjectedValue {
 
 	private String name;

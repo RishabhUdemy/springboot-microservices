@@ -11,6 +11,7 @@ import com.boot.configurationproperties.annotation.beans.ValueInjectedValue;
 public class ConfigurationPropertiesAnnotationApplication {
 
 	public static void main(String[] args) {
+		
 		ApplicationContext ctx =  SpringApplication.run(ConfigurationPropertiesAnnotationApplication.class, args);
 		ConfigurationPropertiesInjectedValue configprop = ctx.getBean("configproperties",ConfigurationPropertiesInjectedValue.class);
 		System.out.println(configprop);
