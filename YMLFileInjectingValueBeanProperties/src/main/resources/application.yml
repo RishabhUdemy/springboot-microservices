@@ -1,0 +1,32 @@
+#YML Configuration
+org:
+   emp:
+      detail:
+         id: 1001
+         name: JOHN
+         #Array
+         nickName: 
+            - Johnny
+            - James
+         #List   
+         teamMember: 
+            - SMITH
+            - WARN
+            - WILL
+         #Set
+         phoneNumber: 
+            - 7878788878
+            - 9999999999
+            - 5555555555
+            - 5555555555
+         #Map
+         idDetails:
+            adhar: 545787855454
+            Pan: ASLP324J
+            voterid: ADF464SKKD
+         #HAS-A
+         companyDetail: 
+            name: HCL
+            location: Hyd
+            size: 200
+            
