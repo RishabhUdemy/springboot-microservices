@@ -15,6 +15,7 @@ public class ConfigurationPropertiesAnnotationApplication {
 		ApplicationContext ctx =  SpringApplication.run(ConfigurationPropertiesAnnotationApplication.class, args);
 		ConfigurationPropertiesInjectedValue configprop = ctx.getBean("configproperties",ConfigurationPropertiesInjectedValue.class);
 		System.out.println(configprop);
+		
 		ValueInjectedValue value = ctx.getBean("valueannotaion",ValueInjectedValue.class);
 		System.out.println(value);
 	}
